@@ -8,6 +8,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <title>MUSE PLAYBOX by Tien</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="/javascripts/index.js"></script>
 </head>
 
@@ -18,7 +20,7 @@
       <li><a href="#header">Home</a></li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#music">Music</a></li>
-      <li><a href="#drama">Drama & Writing</a></li>
+      <li><a href="#dw">Drama & Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -32,9 +34,9 @@
 
   <div id="content">
     <!-- Content for each section goes here -->
-    <div id="about" class="">
+    <div id="about" class="section">
       <div>
-        <h1 class=" header">About me</h1>
+        <h1 class="section-header header">About me</h1>
         <div class="about-content ">
           <div class="about-image ">
             <img src="/images/tobeupdate.png" alt="">
@@ -64,7 +66,7 @@
 
           </div>
         </div>
-        <h2 class=" header">Feature</h2>
+        <h2 class="section-sub-header header">Feature</h2>
         <div class="about-gallery ">
           <img src="/images/tobeupdate.png" alt="" class="about-gallery-item">
           <img src="/images/tobeupdate.png" alt="" class="about-gallery-item">
@@ -77,13 +79,56 @@
     </div>
 
     <!-- music  -->
-    <div id="music">
-      <div>
-        <h1 class="header">Music</h1>
-        
+    <div id="music" class="section">
+      <div class="">
+        <h1 class="header section-header ">Music</h1>
+        <div class=" music-content t-a-center t-s-10 gap-20 ">
+          <a href="/piano" id="to-piano" class="d-block col-2 row center bor-rad-15 t-c-black">
+            <div class=" ">
+              <span class="material-symbols-outlined">
+                arrow_back_ios
+              </span>
+              Piano
+            </div>
+          </a>
+          <a href="/music" id="to-music" class="d-block col-2 row center bor-rad-15 t-c-black">
+            <div class="">
+              Vocal
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
+
+    <!-- drama & writing  -->
+    <div id="dw" class="section">
+      <div class="">
+        <h1 class="header section-header ">Drama & Writing</h1>
+        <div class=" music-content t-a-center t-s-10 gap-20 ">
+          <a href="/drama" id="to-drama" class="d-block col-2 row center bor-rad-15 t-c-black">
+            <div class=" ">
+              <span class="material-symbols-outlined">
+                arrow_back_ios
+              </span>
+              Drama
+            </div>
+          </a>
+          <a href="/writing" id="to-writing" class="d-block col-2 row center bor-rad-15 t-c-black">
+            <div class="">
+              Writing
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+<footer id="contact">
+  
+</footer>
 </body>
 
 </html>

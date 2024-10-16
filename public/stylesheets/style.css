@@ -7,6 +7,22 @@
   --5th-color: #fbc46c;
 }
 
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #fbe8da;
+  inherits: false;
+}
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #fbc46c;
+  inherits: false;
+}
+@property --myColor3 {
+  syntax: "<color>";
+  initial-value: #ea5f3a;
+  inherits: false;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,16 +43,52 @@ body {
 }
 
 a {
-  color: #00b7ff;
+  color: inherit;
+  text-decoration: none;
 }
 
 .header {
   font-family: "Playfair", serif;
   font-variation-settings: "wdth" 100;
 }
+.d-block {
+  display: block;
+}
+.row {
+  display: flex;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.col-2 {
+  width: 50%;
+}
+.gap-20 {
+  gap: 20px;
+}
+
+.t-a-center {
+  text-align: center;
+}
+.t-s-4 {
+  font-size: 4rem;
+}
+.t-s-10 {
+  font-size: 10rem;
+}
+.t-c-black {
+  color: rgb(3, 3, 3);
+}
+
+.bor-rad-15 {
+  border-radius: 15px;
+}
 
 #navbar {
   position: fixed;
+  z-index: 1000;
   width: 100%;
   top: 0;
   transition: background-color 0.3s;
@@ -114,19 +166,21 @@ a {
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-
-#about {
-  padding: 100px 20px 50px;
-}
-#about h1 {
+.section-header {
   text-align: center;
-  font-size: 4em;
+  font-size: 5em;
   margin-bottom: 20px;
 }
-#about h2 {
+
+.section-sub-header {
+  margin-top: 20px;
   text-align: center;
   font-size: 3em;
   margin-bottom: 20px;
+}
+
+.section {
+  padding: 100px 20px 50px;
 }
 
 .about-content {
@@ -220,9 +274,162 @@ a {
 }
 
 #content {
-  padding-top: 100px;
-  height: 2000px; /* Placeholder to enable scrolling */
+  height: fit-content; /* Placeholder to enable scrolling */
 }
+
+.music-content {
+  display: flex;
+}
+
+.music-content .material-symbols-outlined {
+  font-size: 10rem;
+}
+
+#to-piano {
+  height: 400px;
+  background: linear-gradient(
+    135deg,
+    var(--myColor3),
+    var(--myColor2),
+    var(--myColor1)
+  );
+  transition: --myColor1 0.5s linear, --myColor2 0.5s linear,
+    --myColor3 0.5s linear;
+}
+
+#to-music {
+  height: 400px;
+  background: linear-gradient(
+    45deg,
+    var(--myColor1),
+    var(--myColor2),
+    var(--myColor3)
+  );
+  transition: --myColor1 0.5s linear, --myColor2 0.5s linear,
+    --myColor3 0.5s linear;
+}
+#to-piano:hover {
+  --myColor1: var(--1st-color);
+  --myColor2: var(--2nd-color);
+  --myColor3: var(--3rd-color);
+}
+#to-piano div:hover,
+#to-piano:hover div {
+  scale: 1.1;
+}
+#to-music:hover {
+  --myColor1: var(--1st-color);
+  --myColor2: var(--2nd-color);
+  --myColor3: var(--3rd-color);
+}
+#to-music div:hover,
+#to-music:hover div {
+  scale: 1.1;
+}
+
+.dw-content {
+  display: flex;
+}
+
+.dw-content .material-symbols-outlined {
+  font-size: 10rem;
+}
+
+#to-drama {
+  height: 400px;
+  background: linear-gradient(
+    45deg,
+    var(--myColor3),
+    var(--myColor2),
+    var(--myColor1)
+  );
+  transition: --myColor1 0.5s linear, --myColor2 0.5s linear,
+    --myColor3 0.5s linear;
+}
+
+#to-writing {
+  height: 400px;
+  background: linear-gradient(
+    135deg,
+    var(--myColor1),
+    var(--myColor2),
+    var(--myColor3)
+  );
+  transition: --myColor1 0.5s linear, --myColor2 0.5s linear,
+    --myColor3 0.5s linear;
+}
+#to-drama:hover {
+  --myColor1: var(--1st-color);
+  --myColor2: var(--2nd-color);
+  --myColor3: var(--3rd-color);
+}
+#to-drama div:hover,
+#to-drama:hover div {
+  scale: 1.1;
+}
+#to-writing:hover {
+  --myColor1: var(--1st-color);
+  --myColor2: var(--2nd-color);
+  --myColor3: var(--3rd-color);
+}
+#to-writing div:hover,
+#to-writing:hover div {
+  scale: 1.1;
+}
+
+.gallery {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+.gallery iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  height: 20%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  background: var(--4th-color);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 0.9;
+}
+.overlay-text {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay-year {
+  font-size: 1.5rem;
+}
+
 
 .border-test {
   border: 1px solid black;
