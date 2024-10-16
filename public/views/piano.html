@@ -82,27 +82,95 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <div class="overlay">
-                            <div class="overlay-text">Prelude 2 Nguyễn Đình Lượng<br><span
-                                    class="overlay-year"></span></div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./images/tobeupdate.png" alt="">
-                        <div class="overlay">
-                            <div class="overlay-text">Seedlink<br><span class="overlay-year"></span></div>
+                            <div class="overlay-text">Prelude 2 Nguyễn Đình Lượng<br><span class="overlay-year"></span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="gallery-item">
-                        <img src="./images/tobeupdate.png" alt="">
-                        <div class="overlay">
-                            <div class="overlay-text">Seedlink<br><span class="overlay-year"></span></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        //25 images
+        let images = [
+            { imgsrc: "./images/tobeupdate.png", title: "Festival HVANQG", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "1", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "2", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "3", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "4", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "5", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "6", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "7", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "8", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "9", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "10", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "11", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "12", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "13", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "14", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "15", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "16", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "17", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "18", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "19", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "20", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "21", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "22", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "23", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "24", year: "2016" },
+            { imgsrc: "./images/tobeupdate.png", title: "25", year: "2016" }
+        ]
+        //dom
+        let gallery = document.querySelector(".gallery");
+
+        images.forEach(image => {
+            let gallery_item = document.createElement('div')
+            gallery_item.classList.add("gallery-item");
+            if (image.imgsrc.includes("youtube")) {
+                gallery_item.innerHTML = `<iframe src="${image.imgsrc}" title="${image.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="overlay">
+                            <div class="overlay-text">${image.title}<br><span class="overlay-year">${image.year}</span></div>
+                        </div>`;
+            } else {
+                gallery_item.innerHTML = `<img data-src="${image.imgsrc}" alt="" class="lazy">
+                        <div class="overlay">
+                            <div class="overlay-text">${image.title}<br><span class="overlay-year">${image.year}</span></div>
+                        </div>`;
+            }
+            gallery.appendChild(gallery_item)
+        });
+        //lazy load
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImgs = document.querySelectorAll('img.lazy')
+
+            const lazyLoad = (image) => {
+                image.src = image.dataset.src;
+                image.classList.remove('lazy')
+            }
+
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const image = entry.target
+                            lazyLoad(image)
+                            observer.unobserve(image)
+                        }
+                    })
+                })
+                lazyImgs.forEach(img => {
+                    observer.observe(img)
+                })
+
+            } else {
+                lazyImgs.forEach(img => {
+                    lazyLoad(img)
+                })
+            }
+        })
+    </script>
 </body>
 
 </html>
