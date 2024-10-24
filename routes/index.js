@@ -16,4 +16,7 @@ router.get('/writing', function (req, res, next) {
   res.sendFile('views/writing.html', { root: 'public' });
 })
 
+router.get('/drama', function (req, res, next) {
+  res.sendFile('views/drama.html', { root: 'public' });
+})
 module.exports = router;

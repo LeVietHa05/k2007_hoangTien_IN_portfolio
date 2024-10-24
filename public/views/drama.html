@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>Muse playbox by Tien</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="nav-containter">
+        <nav id="nav">
+            <div><a href="/">home</a></div>
+            <div><a href="/about">About me</a></div>
+            <div><a href="/music">Music</a></div>
+            <div><a href="/drama" class="active">Drama</a></div>
+            <div><a href="/writing">Writing</a></div>
+        </nav>
+    </div>
+
+    <div id="drama" class="px-80">
+        <div class="row pt-200 ">
+            <div class="bebas box-shadow-1 col-2 d-f align-end c-primary1 bg-4 fs-52 p-20-32"
+                style="height: 154px; letter-spacing: 2.08px;">
+                <div>Acting</div>
+            </div>
+            <div class="row justify-start box-shadow-1 col-2 bg-1 fs-24 p-20-32" style="height: 154px;">
+                <ul class="pl-24">
+                    <li>Literature Stage Adaptation 2023</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="my-40 fs-20 l-h-36">I’m on stage once more, but this time in a different role. Acting presented a
+            unique challenge, especially as
+            the lead
+            character. Portraying someone who must maintain a poignant emotional depth while surrounded by comedic and
+            satirical
+            elements proved to be particularly difficult, especially having to convey tears throughout the performance.
+        </p>
+
+        <div class="row g-24 b-b-1 pb-40" style="flex-wrap: wrap;">
+            <div>
+                <img src="images/drama-1.png" alt="">
+            </div>
+            <div>
+                <img src="images/drama-2.png" alt="">
+            </div>
+            <div>
+                <img src="images/drama-3.png" alt="">
+            </div>
+            <div>
+                <img src="images/drama-4.png" alt="">
+            </div>
+            <div>
+                <img src="images/drama-5.png" alt="">
+            </div>
+        </div>
+
+        <div class="row my-40">
+            <div class="bebas box-shadow-1 col-2 d-f align-end c-primary1 bg-4 fs-52 p-20-32"
+                style="height: 154px; letter-spacing: 2.08px;">
+                <div>screenwriter</div>
+            </div>
+            <div class="row justify-start box-shadow-1 col-2 bg-1 fs-24 p-20-32" style="height: 154px;">
+                <ul class="pl-24">
+                    <li>Literature Stage Adaptation 2024</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row g-8 my-40">
+            <div>
+                <p class="fs-20 l-h-36">Becoming the Head of Playwright was something I never anticipated. However,
+                    since "Bình Ngô Đại cáo"
+                    is one of my
+                    favorite poems, I eagerly embraced the opportunity to adapt it for the stage. 7 drafts, months of
+                    insomnia, and finally,
+                    everything paid off with the Best Script Award and overall 3rd Prize.</p>
+            </div>
+            <div><iframe width="860" height="484" src="https://www.youtube.com/embed/yqYkYSUZrxE"
+                    title="Tiểu phẩm “Bình Ngô Đại Cáo&quot; do tập thể lớp 11A1 biểu diễn" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="row g-24 b-b-1 pb-40" style="flex-wrap: wrap;" id="lastofdrama">
+
+        </div>
+
+        <div class="pb-70">
+
+        </div>
+        <script>
+            let imgs = [
+                "images/drama-6.png",
+                "images/drama-7.png",
+                "images/drama-8.png",
+                "/images/drama-12.png",
+                "images/drama-9.png",
+                "images/drama-10.png",
+                "images/drama-11.png"
+            ];
+            let lastofdrama = document.getElementById("lastofdrama");
+            imgs.forEach((img) => {
+                let div = document.createElement("div");
+                let imgTag = document.createElement("img");
+                imgTag.src = img;
+                div.appendChild(imgTag);
+                lastofdrama.appendChild(div);
+            });
+        </script>
+    </div>
+</body>
+
+</html>

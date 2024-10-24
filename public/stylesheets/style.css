@@ -12,6 +12,8 @@
   --primary-5: #ba8835;
   --Transparen-white-30: #ffffff4d;
   --Transparen-white-60: #ffffff99;
+  --Transparen-black-30: #0000004d;
+  --Transparen-black-60: #00000099;
 }
 
 html {
@@ -44,6 +46,9 @@ h3 {
 .bg-1 {
   background-color: var(--primary-1);
 }
+.bg-4 {
+  background-color: var(--primary-4);
+}
 .c-primary1 {
   color: var(--primary-1);
 }
@@ -67,6 +72,9 @@ h3 {
 }
 .g-24 {
   gap: 24px;
+}
+.g-40 {
+  gap: 40px;
 }
 .g-48 {
   gap: 48px;
@@ -115,6 +123,9 @@ h3 {
 }
 .pb-32 {
   padding-bottom: 32px;
+}
+.pb-40 {
+  padding-bottom: 40px;
 }
 .pb-70 {
   padding-bottom: 70px;
@@ -233,19 +244,19 @@ h3 {
   display: block;
 }
 .justify-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 .justify-start {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 .justify-end {
-  justify-content: flex-end;
+  justify-content: flex-end !important;
 }
 .align-center {
-  align-items: center;
+  align-items: center !important;
 }
 .align-end {
-  align-items: flex-end;
+  align-items: flex-end !important;
 }
 .blend-lighten {
   mix-blend-mode: lighten;
@@ -255,6 +266,15 @@ h3 {
 }
 .blend-multiply {
   mix-blend-mode: multiply;
+}
+
+.box-shadow-1 {
+  box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+}
+
+.b-b-1 {
+  border-bottom: 2px solid var(--Transparen-black-30);
 }
 
 .row {
@@ -449,6 +469,7 @@ h3 {
 
 #about,
 #music,
+#drama,
 #writing {
   max-width: 1440px;
   color: var(--primary-3);
