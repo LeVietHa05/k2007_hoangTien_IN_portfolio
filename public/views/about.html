@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>Muse playbox by Tien</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="nav-containter">
+        <nav id="nav">
+            <div><a href="/">home</a></div>
+            <div><a href="/about" class="active">About me</a></div>
+            <div><a href="/music">Music</a></div>
+            <div><a href="/drama">Drama/Writing</a></div>
+        </nav>
+    </div>
+
+    <div id="about" class="px-60">
+        <div class="row pt-200">
+            <div class="col-2 d-f justify-start bg-1 blend-darken">
+                <img src="images/about-1.png" alt="">
+            </div>
+            <div style="padding-right: 80px; display: flex;flex-direction: column;align-items: flex-start;gap: 16px;">
+                <p class="fs-24">MUSE PLAYBOX</p>
+                <h1 class="fs-88 f-w-normal bebas">tien h. le</h1>
+                <ul class="pl-24">
+                    <li>Senior at Foreign Language Specialized School</li>
+                    <li>Vietnam National Academy of Music</li>
+                </ul>
+                <div class="row fs-20"
+                    style="display: flex; flex-direction: row; justify-content: flex-start;  gap: 8px;">
+                    <div class="more-about">What's more</div>
+                    <div class=" more-about">My Resume</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row l-h-36 g-60">
+            <div>
+                <ul class="fs-24 pl-32 f-st-i f-w-bigger ">
+                    <li>Hi, I’m Tien, but you can call me Sussy Shrimp. Welcome to MUSE PLAYBOX, my personal portfolio.
+                    </li>
+                </ul>
+                <p class="fs-20 c-primary2">MUSE PLAYBOX emerges from a whimsical collection of the muse - the creative
+                    inspirations drawn from
+                    my experience as a
+                    musician, a writer, and a culture explorer. Those inspirations eventually seeped into my personal
+                    life, shaping my
+                    artistic perspective, and through a lot of musing, manifested in the final forms of personal
+                    creative artworks. MUSE
+                    PLAYBOX is not only a museum of my creations but also a playful diary of my ongoing artistic
+                    journey. </p>
+            </div>
+            <div class="bg-1 blend-darken">
+                <img src="images/about-2.png" alt="">
+            </div>
+        </div>
+
+        <div class="my-40 l-h-36">
+            <ul class="fs-24 pl-32 f-st-i f-w-bigger my-16">
+                <li>Music</li>
+            </ul>
+            <p class="fs-20 c-primary2">As a musician, I have performed in various concerts as well as participated in
+                prestigious competitions both in Vietnam
+                and overseas. However, the most memorable experience to me is organizing a concert myself. Euphoria
+                concert 2024 honed
+                my pianist skills and taught me how to use music power to help the community. We have donated all the
+                money from our
+                campaign to UNICEF and also support children from SOS Village with the facilities we received. </p>
+        </div>
+
+        <div class="my-40 l-h-36">
+            <ul class="fs-24 pl-32 f-st-i f-w-bigger my-16">
+                <li>Drama and Writing</li>
+            </ul>
+            <p class="fs-20 c-primary2">The passion for theater motivates me to try out different roles in a stage
+                performance. From an actor to a playwright,
+                from standing straight on the stage to planning every scene behind the curtains, all of them fascinate
+                me.</p>
+        </div>
+
+        <div class="gallery pt-60">
+
+        </div>
+
+        <div class="fs-44 bebas t-a-center my-40">
+            My love for music and my passion for culture have united, forming my identity as a culture explorer who
+            embraces it all.
+        </div>
+    </div>
+
+    <script>
+        let about_gallery = document.querySelector('.gallery');
+        let images = [
+            'images/about-3.png',
+            'images/about-4.png',
+            'images/about-5.png'
+        ];
+        images.forEach((image) => {
+            let img = document.createElement('img');
+            img.src = image;
+            img.alt = '';
+            about_gallery.appendChild(img);
+        }); 
+    </script>
+</body>
+
+</html>
